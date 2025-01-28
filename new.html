@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Glorious Praise Ministries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Responsive Header */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: rgb(16, 78, 16);
+        }
+
+        .button, .card a button {
+            background-color: rgb(16, 78, 16);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .section {
+            background-image: url(/images/pexels-jibarofoto-2774546.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            margin-top: 60px; /* Offset for fixed header */
+        }
+
+        .section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background-color: rgb(211, 211, 191);
+        }
+        i {
+            font-size: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .aboutus {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer i {
+            font-size: 1.5rem;
+            margin: 1rem;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer i:hover {
+            color: rgb(16, 78, 16);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                position: static;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .links {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+
+            .section h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 1rem;
+            }
+
+            .button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <p class="gpm">GLORIOUS PRAISE MINISTRIES</p>
+        </div>
+        <div class="links">
+            <a href="#about">About Us</a>
+            <a href="#sermons">Sermons</a>
+            <a href="#ministries">Ministries</a>
+            <a href="#getinvolved">Get Involved</a>
+            <a href="#give">Giving</a>
+            <button class="button">Contact Us</button>
+        </div>
+    </header>
+
+    <section class="section">
+        <h1><b><span>WELCOME to </span> <br>GLORIOUS PRAISE MINISTRIES</b></h1>
+        <p style="margin: 1.5rem 0;">
+            <b>We are excited to welcome you home as part of our family. Below are the details we hope will put you at ease and make your experience an inviting one. It's absolutely amazing that you are here!</b>
+        </p>
+        <a href="#getconnected"><button class="button button2">GET CONNECTED</button></a>
+    </section>
+
+    <main>
+        <section class="cards">
+            <!-- Cards content same as before -->
+            <div class="card">
+                <i class="fa fa-comments" aria-hidden="true"></i>
+                <h2>Midweek prayers</h2>
+                <p>Come and pray together <br> with us throughout the <br> week</p>
+                <a href=""><button>See what's on</button></a>
+            </div>
+            <div class="card">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <h2>Loving & giving</h2>
+                <p>Our aim is to spread Jesus <br> through love and service,<br> mirroring His example. </p>
+                <a href=""><button>Learn more</button></a>
+            </div>
+            <div class="card">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <h2>Our Sermons</h2>
+                <p>View our sermons through <br> our interactive sermon <br>library</p>
+                <a href=""><button>Watch now</button></a>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="aboutus">
+                <h1 id="about">ABOUT US</h1>
+                <p>We are a ministry dedicated to serving Jesus Christ and transforming lives of people and communities through immense dedication through hearty moments together and benevolent act of service to the needy people and sharing the gospel truth of the bible through our weekly sermons. We are community that shares love and memories together focused on the family nucleus to produce families that bondes strong together in Christ </p>
+            </div>
+            <div class="images">
+                <!-- Images content same as before -->
+                <img src="/images/worship.jpg" alt="">
+                <img src="/images/pexels-tara-winstead-8383443.jpg" alt="">
+                <img src="/images/pexels-rquiros-2330141.jpg" alt="">
+                <img src="/images/pexels-rdne-6646918.jpg" alt="">
+                <img src="/images/pexels-lagosfoodbank-8060428.jpg" alt="">
+                <img src="/images/pexels-pavel-danilyuk-8815042.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer content same as before -->
+        <p class="title">GLORIOUS PRAISE MINISTRIES</p>
+        
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+        <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+
+    </footer>
+
+    <script>
+        // Scroll animation trigger
+        const animateElements = document.querySelectorAll('.card, .aboutus, .images');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if(window.scrollY > 100) {
+                header.style.background = 'rgba(255,255,255,0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'white';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
