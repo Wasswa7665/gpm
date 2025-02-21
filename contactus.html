@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Glorious Praise Ministries</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #4CAF50; /* Green color for headings */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #4CAF50;
+            margin: 0 10px;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                font-size: 0.9rem;
+            }
+
+            .social-media a {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <h1><i class="fas fa-envelope icon"></i>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have a question, prayer request, or just want to connect, feel free to reach out to us.</p>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <p>Follow us on social media:</p>
+            <a href="https://facebook.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Optional: Add GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        // Example GSAP Animation
+        gsap.from(".container", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+    </script>
+</body>
+</html>

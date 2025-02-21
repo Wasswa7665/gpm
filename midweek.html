@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midweek Prayers</title>
+    <!-- Add Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .center {
+            text-align: center;
+            padding: 20px;
+        }
+
+        div {
+            background-color: #fff;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #777;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            div {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        .animate__animated {
+            animation-duration: 1s;
+        }
+
+        /* Icons */
+        .icon {
+            margin-right: 10px;
+            color: #4CAF50; /* Green color for icons */
+        }
+    </style>
+</head>
+<body>
+    <div class="center animate__animated animate__fadeIn">
+        <section>
+            <h1><i class="fas fa-pray icon"></i>Join our Midweek Prayers Online</h1>
+        </section>
+        
+        <h3><i class="fas fa-video icon"></i>Monday Main Zoom Meeting</h3>
+        <p>17:00 - 18:20pm</p>
+
+        <h3><i class="fas fa-sun icon"></i>Day Break Prayers</h3>
+        <p>Monday - Friday</p>
+        <p>6:00am - 6:30am , 12:00pm - 12:30pm</p>
+
+        <h3><i class="fas fa-hands-praying icon"></i>Tuesdays to Friday</h3>
+        <p>Main Intercessions</p>
+        <p>16:00 - 17:00pm</p>
+    </div>
+
+    <!-- Optional: Add GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        // Example GSAP Animation
+        gsap.from("div", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+    </script>
+</body>
+</html>

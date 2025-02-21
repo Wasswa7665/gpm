@@ -5,206 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Glorious Praise Ministries</title>
+    <link rel="stylesheet" href="/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Responsive Header */
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: white;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .links a {
-            text-decoration: none;
-            color: black;
-            transition: color 0.3s ease;
-        }
-
-        .links a:hover {
-            color: rgb(16, 78, 16);
-        }
-
-        .button, .card a button {
-            background-color: rgb(16, 78, 16);
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .section {
-            background-image: url(pexels-jibarofoto-2774546.jpg);
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem;
-            color: white;
-            text-align: center;
-            margin-top: 60px; /* Offset for fixed header */
-        }
-
-        .section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s forwards;
-        }
-
-        /* Cards Section */
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 4rem 2rem;
-            background-color: rgb(211, 211, 191);
-        }
-        i {
-            font-size: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 350px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* About Section */
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 4rem 2rem;
-        }
-
-        .aboutus {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            flex: 1;
-        }
-
-        .images img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .images img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        .footer {
-            background: #333;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer i {
-            font-size: 1.5rem;
-            margin: 1rem;
-            color: white;
-            transition: color 0.3s ease;
-        }
-
-        .footer i:hover {
-            color: rgb(16, 78, 16);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header {
-                position: static;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .links {
-                margin-top: 1rem;
-                justify-content: center;
-            }
-
-            .section h1 {
-                font-size: 2rem;
-            }
-
-            .card {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section {
-                padding: 1rem;
-            }
-
-            .button {
-                width: auto;
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -218,7 +21,7 @@
             <a href="#ministries">Ministries</a>
             <a href="#getinvolved">Get Involved</a>
             <a href="#give">Giving</a>
-            <button class="button">Contact Us</button>
+             <a href="/contactus.html"><button class="button">Contact Us</button></a>
         </div>
     </header>
 
@@ -232,12 +35,11 @@
 
     <main>
         <section class="cards">
-            <!-- Cards content same as before -->
             <div class="card">
                 <i class="fa fa-comments" aria-hidden="true"></i>
                 <h2>Midweek prayers</h2>
                 <p>Come and pray together <br> with us throughout the <br> week</p>
-                <a href=""><button>See what's on</button></a>
+                <a href="/midweek.html"><button>See what's on</button></a>
             </div>
             <div class="card">
                 <i class="fa fa-heart" aria-hidden="true"></i>
@@ -256,29 +58,53 @@
         <section class="about">
             <div class="aboutus">
                 <h1 id="about">ABOUT US</h1>
-                <p>We are a ministry dedicated to serving Jesus Christ and transforming lives of people and communities through immense dedication through hearty moments together and benevolent act of service to the needy people and sharing the gospel truth of the bible through our weekly sermons. We are community that shares love and memories together focused on the family nucleus to produce families that bondes strong together in Christ </p>
+                <p>We are a ministry dedicated to serving Jesus Christ and transforming lives of people and communities through immense dedication through hearty moments together and benevolent act of service to the needy people and sharing the gospel truth of the bible through our weekly sermons. We are community that shares love and memories together focused on the family nucleus to produce families that are bonded strong together in Christ </p>
             </div>
             <div class="images">
-                <!-- Images content same as before -->
-                <img src="worship.jpg" alt="">
-                <img src="pexels-tara-winstead-8383443.jpg" alt="">
-                <img src="pexels-rquiros-2330141.jpg" alt="">
-                <img src="pexels-rdne-6646918.jpg" alt="">
-                <img src="pexels-lagosfoodbank-8060428.jpg" alt="">
-                <img src="pexels-pavel-danilyuk-8815042.jpg" alt="">
+                <img src="/images/worship.jpg" alt="">
+                <img src="/images/pexels-tara-winstead-8383443.jpg" alt="">
+                <img src="/images/pexels-rquiros-2330141.jpg" alt="">
+                <img src="/images/pexels-rdne-6646918.jpg" alt="">
+                <img src="/images/pexels-lagosfoodbank-8060428.jpg" alt="">
+                <img src="/images/pexels-pavel-danilyuk-8815042.jpg" alt="">
+            </div>
+        </section>
+        <section class="sermons" id="sermons">
+            <p class="serm">SERMONS</p>
+            <h1>RECENT SERMONS</h1>
+            <div class="sermonImgs">
+                <div class="sermonImg">
+                    <img src="/images/worship.jpg" alt="">
+                    <p>3rd Feb 2025  .  By Sister Evelyn</p>
+                    <h3>THE POWER OF THE SPOKEN WORD OF GOD</h3>
+                    <p>The earth has been watered and God's word has comeforth to accomplish his purpose and desires</p>
+                </div>
+                <div class="sermonImg">
+                    <img src="/images/pexels-tara-winstead-8383443.jpg" alt="">
+                    <p>4th Feb 2025 . By Pastor Mark</p>
+                    <h3>THE LAWS OF DOMION</h3>
+                    <p>If your life is bankrupt of fire upon your prayer altar it will translate into a life of perpetual defeat </p>
+                </div>
+                <div class="sermonImg">
+                    <img src="/images/pexels-rquiros-2330141.jpg" alt="">
+                    <p>29th Jan 2025 . By Pastor Micheal</p>
+                    <h3>THE REWARD SYSTEM OF THE KINGDOM</h3>
+                    <p>The concept of rewarding creates guilt within men because we seek God primarily because we Love Him. In God's dealings with men,  he has programmed a system of reward that we must embrace.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <!-- Footer content same as before -->
-        <p class="title">GLORIOUS PRAISE MINISTRIES</p>
-        
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-google-plus" aria-hidden="true"></i>
-        <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+#        <p class="title">GLORIOUS PRAISE MINISTRIES</p>
+        <p>&copy All rights reseved Glorious Praise Ministries 2025</p>
+        <div>
+            <a href="https://facebook.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" class="animate__animated animate__bounce"><i class="fab fa-youtube"></i></a>
+        </div>
+      
 
     </footer>
 

@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Responsive Header */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gpm {
+    font-size: 21px;
+    font-weight: 905;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: rgb(24, 223, 24);
+}
+
+.button, .card a button {
+    background-color: rgb(16, 78, 16);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card a button {
+    margin-top: 12px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.section {
+    background-image: url(/images/pexels-jibarofoto-2774546.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 60px; /* Offset for fixed header */
+}
+
+.section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: rgb(211, 211, 191);
+}
+i {
+    font-size: 30px;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.aboutus {
+    flex: 1;
+    min-width: 300px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    flex: 1;
+}
+
+.images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.1s ease;
+}
+
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* Section Styling */
+.sermons {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.serm {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.sermons h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Sermon Grid Layout */
+.sermonImgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Sermon Card Styling */
+.sermonImg {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sermonImg:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sermonImg img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.sermonImg p {
+    font-size: 14px;
+    color: #888;
+    padding: 15px 20px 0;
+}
+
+.sermonImg h3 {
+    font-size: 22px;
+    color: #333;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.sermonImg p:last-of-type {
+    font-size: 14px;
+    color: #555;
+    padding: 0 20px 20px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sermons h1 {
+        font-size: 28px;
+    }
+
+    .sermonImgs {
+        grid-template-columns: 1fr;
+    }
+
+    .sermonImg {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sermonImg {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.sermonImg:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.sermonImg:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.sermonImg:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: rgb(16, 78, 16);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .section h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 1rem;
+    }
+
+    .button {
+        width: auto;
+    }
+}
